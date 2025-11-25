@@ -4,23 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://bmoahfwefkhi1" path="res://assets/idle_new.png" id="1_r3jqh"]
 [ext_resource type="Texture2D" uid="uid://kfkselesjs8b" path="res://assets/walk.png" id="2_11i6m"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wnbtv"]
-load_path = "res://.godot/imported/idle.png-600a6709c1a21ab5f528af7b11a02560.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_va2y3"]
-atlas = SubResource("CompressedTexture2D_wnbtv")
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1dw6"]
+atlas = ExtResource("1_r3jqh")
 region = Rect2(0, 80, 80, 80)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_di5r8"]
-atlas = SubResource("CompressedTexture2D_wnbtv")
+[sub_resource type="AtlasTexture" id="AtlasTexture_yw30f"]
+atlas = ExtResource("1_r3jqh")
 region = Rect2(80, 80, 80, 80)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xcr2m"]
-atlas = SubResource("CompressedTexture2D_wnbtv")
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjkh3"]
+atlas = ExtResource("1_r3jqh")
 region = Rect2(160, 80, 80, 80)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t4jgt"]
-atlas = SubResource("CompressedTexture2D_wnbtv")
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6k8r"]
+atlas = ExtResource("1_r3jqh")
 region = Rect2(240, 80, 80, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q6fdi"]
@@ -38,6 +35,9 @@ region = Rect2(160, 240, 80, 80)
 [sub_resource type="AtlasTexture" id="AtlasTexture_i2dqv"]
 atlas = ExtResource("1_r3jqh")
 region = Rect2(240, 240, 80, 80)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wnbtv"]
+load_path = "res://.godot/imported/idle.png-600a6709c1a21ab5f528af7b11a02560.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_idcyo"]
 atlas = SubResource("CompressedTexture2D_wnbtv")
@@ -203,16 +203,16 @@ region = Rect2(560, 160, 80, 80)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_va2y3")
+"texture": SubResource("AtlasTexture_g1dw6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_di5r8")
+"texture": SubResource("AtlasTexture_yw30f")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xcr2m")
+"texture": SubResource("AtlasTexture_qjkh3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_t4jgt")
+"texture": SubResource("AtlasTexture_g6k8r")
 }],
 "loop": true,
 "name": &"idle_down",
@@ -399,9 +399,11 @@ position = Vector2(0.5, 0)
 sprite_frames = SubResource("SpriteFrames_y6b0y")
 animation = &"idle_down"
 autoplay = "idle_down"
-frame = 3
-frame_progress = 0.86743253
 speed_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_y7q34")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
