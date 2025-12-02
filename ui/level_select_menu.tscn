@@ -1,6 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://cca1h0hrbkfxj"]
+[gd_scene load_steps=15 format=3 uid="uid://cca1h0hrbkfxj"]
 
 [ext_resource type="Script" uid="uid://sa484qodi6mx" path="res://ui/level_select_menu.gd" id="1_6wfmb"]
+[ext_resource type="Script" uid="uid://c086o7ijiq64a" path="res://ui/level_button.gd" id="2_2uln7"]
+[ext_resource type="PackedScene" uid="uid://ccm4sngi51fh2" path="res://levels/level_1.tscn" id="3_nb4nh"]
+[ext_resource type="PackedScene" uid="uid://317e7kq1ekf5" path="res://levels/level_2.tscn" id="4_kltry"]
+[ext_resource type="PackedScene" uid="uid://buc73jcahqxle" path="res://levels/level_3.tscn" id="5_buxvp"]
+[ext_resource type="PackedScene" uid="uid://danm7df22wg62" path="res://levels/level_4.tscn" id="6_w8ujy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kltry"]
 bg_color = Color(0.14767182, 0.14767182, 0.14767176, 1)
@@ -102,9 +107,9 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 44
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
+text = "1"
+script = ExtResource("2_2uln7")
+Level = ExtResource("3_nb4nh")
 
 [node name="Button2" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(70, 70)
@@ -113,9 +118,9 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 44
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
+text = "2"
+script = ExtResource("2_2uln7")
+Level = ExtResource("4_kltry")
 
 [node name="Button3" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(70, 70)
@@ -124,9 +129,10 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 44
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
+text = "3
 "
+script = ExtResource("2_2uln7")
+Level = ExtResource("5_buxvp")
 
 [node name="Button4" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(70, 70)
@@ -135,228 +141,8 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 44
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button5" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button6" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button7" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button8" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button9" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button10" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button11" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button12" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button13" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button14" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button15" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button16" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button17" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button18" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button19" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button20" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button21" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button22" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button23" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
-
-[node name="Button24" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 44
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
-disabled = true
-text = "
-"
+text = "4"
+script = ExtResource("2_2uln7")
+Level = ExtResource("6_w8ujy")
 
 [connection signal="pressed" from="Panel/Exit" to="." method="_on_exit_pressed"]

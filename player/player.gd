@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var move_speed: float = 200
+@export var push_power: float = 300
 
 enum LookSides {UP, DOWN, RIGHT, LEFT}
 
@@ -53,3 +54,7 @@ func handle_movement() -> void:
 	else:
 		is_moving = false
 	move_and_slide()
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		if collision.get_collider() is RigidBody2D:
+			collision.get_collider().apply_force(collision.get_normal() * -push_power)

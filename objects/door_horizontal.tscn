@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1nfjdqmtecf8"]
+
+[ext_resource type="Texture2D" uid="uid://r36jdflb2y0u" path="res://assets/Dungeon_Tileset.png" id="1_566yj"]
+[ext_resource type="Script" uid="uid://b1un85b0lu3ql" path="res://objects/door.gd" id="1_j7xx1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7xx1"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khffo"]
+size = Vector2(8, 18)
+
+[node name="DoorHorizontal" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_j7xx1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_566yj")
+region_enabled = true
+region_rect = Rect2(112, 48, 16, 16)
+
+[node name="Sprite2D_open" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_566yj")
+region_enabled = true
+region_rect = Rect2(128, 80, 16, 16)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_j7xx1")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(5, 0)
+scale = Vector2(0.75, 0.89)
+shape = SubResource("RectangleShape2D_khffo")

@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://crnjirv4cfucn"]
+
+[ext_resource type="Texture2D" uid="uid://r36jdflb2y0u" path="res://assets/Dungeon_Tileset.png" id="1_0nrqi"]
+[ext_resource type="Script" uid="uid://dhste77mxsp" path="res://objects/button.gd" id="1_bri14"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bri14"]
+size = Vector2(16, 16)
+
+[node name="Button" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_bri14")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_0nrqi")
+region_enabled = true
+region_rect = Rect2(0, 160, 16, 16)
+
+[node name="Sprite2D_Pressed" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_0nrqi")
+region_enabled = true
+region_rect = Rect2(16, 160, 16, 16)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(0.87, 0.87)
+shape = SubResource("RectangleShape2D_bri14")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
