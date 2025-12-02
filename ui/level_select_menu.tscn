@@ -1,0 +1,362 @@
+[gd_scene load_steps=10 format=3 uid="uid://cca1h0hrbkfxj"]
+
+[ext_resource type="Script" uid="uid://sa484qodi6mx" path="res://ui/level_select_menu.gd" id="1_6wfmb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kltry"]
+bg_color = Color(0.14767182, 0.14767182, 0.14767176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2uln7"]
+bg_color = Color(0.5921569, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6wfmb"]
+bg_color = Color(0.4425011, 1.871083e-06, 1.2513996e-06, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nb4nh"]
+bg_color = Color(0.8218922, 0.00014410347, 7.9126956e-05, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nb4nh"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_6wfmb"]
+action = &"ui_cancel"
+
+[sub_resource type="Shortcut" id="Shortcut_2uln7"]
+events = [SubResource("InputEventAction_6wfmb")]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6wfmb"]
+
+[node name="LevelSelectMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6wfmb")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -384.0
+offset_top = -216.0
+offset_right = 384.0
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kltry")
+
+[node name="Exit" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -45.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = 45.0
+grow_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_2uln7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6wfmb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nb4nh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nb4nh")
+shortcut = SubResource("Shortcut_2uln7")
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -140.0
+offset_right = 210.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 6
+
+[node name="Button1" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button2" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button3" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button4" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button5" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button6" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button7" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button8" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button9" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button10" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button11" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button12" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button13" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button14" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button15" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button16" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button17" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button18" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button19" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button20" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button21" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button22" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button23" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[node name="Button24" type="Button" parent="Panel/GridContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6wfmb")
+disabled = true
+text = "
+"
+
+[connection signal="pressed" from="Panel/Exit" to="." method="_on_exit_pressed"]
