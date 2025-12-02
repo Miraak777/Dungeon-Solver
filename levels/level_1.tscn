@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=4 uid="uid://ccm4sngi51fh2"]
+[gd_scene load_steps=6 format=4 uid="uid://ccm4sngi51fh2"]
 
 [ext_resource type="Texture2D" uid="uid://r36jdflb2y0u" path="res://assets/Dungeon_Tileset.png" id="1_vn7o3"]
+[ext_resource type="PackedScene" uid="uid://kooyfrg6shdw" path="res://objects/exit.tscn" id="2_bt44k"]
 [ext_resource type="PackedScene" uid="uid://d2xo4ugj43snh" path="res://player/player.tscn" id="2_jirdo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jirdo"]
@@ -147,5 +148,8 @@ collision_enabled = false
 position = Vector2(8, 8)
 tile_map_data = PackedByteArray("AAD///v/AAABAAAAAAAAAPv/AAAFAAAAAAAAAPz/AAAFAAIAAAAAAP3/AAAFAAIAAAAAAP7/AAAFAAIAAAAAAP//AAAFAAEAAAAAAAAAAAAFAAQAAAD//wAAAAACAAQAAAD+/wAAAAAAAAQAAAD+//v/AAAAAAEAAAD+//z/AAAAAAIAAAD+//3/AAAAAAEAAAD+//7/AAAAAAIAAAD+////AAAAAAIAAAA=")
 tile_set = SubResource("TileSet_bt44k")
+
+[node name="Exit" parent="." instance=ExtResource("2_bt44k")]
+position = Vector2(0, -48)
 
 [node name="Player" parent="." instance=ExtResource("2_jirdo")]
